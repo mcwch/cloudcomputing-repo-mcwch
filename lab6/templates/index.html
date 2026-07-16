@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Courses Inventory</title>
+</head>
+<body>
+    <h1>Available Online Courses</h1>
+
+    <ul>
+        {% for course in courses %}
+        <li>
+            <strong>{{ course.title }}</strong>: {{ course.description }}<br>
+            Price: ${{ course.price }} | Quantity: {{ course.quantity }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
